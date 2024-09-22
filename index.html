@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미릉</title>
+</head>
+<body>
+    <div style="border: 1px ; background-color: #c6ebf2;">
+        <form name="gen">
+            <a style="color: #000;text-shadow: 
+            -5px -5px 0 #FFF,  
+            5px -5px 0 #FFF,
+            -5px 5px 0 #FFF,
+            5px 5px 0 #FFF;
+            font-family: ONE Mobile POP;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;">트친표 작성하기</a>
+            <br>
+            <br>    
+            <b>지역</b>
+            <select name="map" onchange="handleMapChange()">
+                <option value="mond">몬드</option>
+                <option value="riool">리월</option>
+                <option value="enazma">이나즈마</option>
+                <option value="sumeru">수메르</option>
+                <option value="phontain">폰타인</option>
+                <option value="anyting">기타</option>
+            </select>
+            <select name="character">
+            </select>
+            <br>
+            <b>트윗 성향</b>
+            <input type="radio" name="RT" value="RT">RT
+            <input type="radio" name="heart" value="마음">마음
+            <input type="radio" name="timeline" value="탐라대화">탐라대화
+            <input type="radio" name="subscribe" value="구독">구독
+            <input type="radio" name="day" value="일상트">일상트
+            <input type="radio" name="yook" value="욕트">욕트
+            <input type="radio" name="suhee" value="수위">수위(19)
+            <br>
+            <b>덕질 성향</b>
+            <input type="radio" name="HL" value="HL">HL
+            <input type="radio" name="BL" value="BL">BL
+            <input type="radio" name="GL" value="GL">GL
+            <input type="radio" name="NCP" value="NCP">NCP
+            <input type="radio" name="dream" value="드림">드림
+            <input type="radio" name="write" value="글">글
+            <input type="radio" name="picture" value="그림">그림
+            <input type="radio" name="sul" value="썰">썰
+            <input type="radio" name="sall" value="소비">소비
+            <input type="radio" name="cosplay" value="코스프레">코스프레
+            <input type="radio" name="mp4" value="영상">영상
+            <input type="radio" name="MMD" value="MMD">MMD
+            <input type="radio" name="goodz" value="굿즈">굿즈
+            <input type="text" name="any" placeholder="기타..">
+            <br>
+            <b>지뢰</b>
+            <input type="text" name="me" placeholder="지뢰">
+            <br>
+            <b>타장르</b>
+            <div onchange="doyouhave()">
+                <input type="radio" name="have" value="yes" checked>yes
+                <input type="text" id="inputText">
+                <input type="radio" name="have" value="no">no
+            </div>
+            <br>
+            <b>이별</b>
+            <input type="radio" name="sad" value="이별">언팔로우
+            <input type="radio" name="sad" value="블언블">블언블
+            <input type="radio" name="sad" value="블락">블락
+            <br>
+            <b>나이</b>
+            <input type="radio" name="age" value="20up">20up
+            <input type="radio" name="age" value="20down">20down
+            <input type="radio" name="age" value="비공개">비공개
+            <br>
+            <b>성별</b>
+            <input type="radio" name="sex" value="남성">남자
+            <input type="radio" name="sex" value="여성">여성
+            <input type="radio" name="sex" value="비공개">비공개
+            <br>
+            <b>닉네임/UID</b>
+            <input style="width: 180px;" type="text" name="gameid" placeholder="예:천사의노래/833366718">
+            <br>
+            <b>모험레벨</b>
+            <input style="width: 50px;" type="text" name="level" placeholder="예:58">
+            <br>
+            <b>서버</b>
+            <input type="radio" name="sever" value="Asia">Asia
+            <input type="radio" name="sever" value="Americ">Americ
+            <input type="radio" name="sever" value="Europe">Europe
+            <input type="radio" name="sever" value="TW/HK/MO">TW/HK/MO
+            <br>
+            <b>플랫폼</b>
+            <input type="radio" name="Moblie" value="Moblie">Moblie
+            <input type="radio" name="PC" value="PC">PC
+            <input type="radio" name="Playstation" value="Playstation">Playstation
+            <br>
+            <b>플레이 성향</b>
+            <input type="radio" name="screenshot" value="스크린샷">스크린샷
+            <input type="radio" name="everyone" value="다인모드">다인모드
+            <input type="radio" name="nasaun" value="나선비경">나선비경
+            <input type="radio" name="world" value="월드탐사">월드탐사
+            <input type="radio" name="levelup" value="캐릭터 육성">캐릭터 육성
+            <input type="radio" name="sevenking" value="입곱 성인의 소환">일곱 성인의 소환
+            <input type="text" name="any" placeholder="기타..">
+            <br>
+            <b>한마디</b>
+            <input type="text" name="say" placeholder="한마디..">
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
+
+
