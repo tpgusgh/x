@@ -4,73 +4,375 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>받은 데이터</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
+<style>
+   #circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;      /* 원형 모양 만들기 */
+    border: 2px solid rgb(0, 201, 201); /* 외곽선 추가 */
+}
+
+</style>
 <body>
-    <h1>받은 폼 데이터</h1>
-    <p id="output"></p>
+    
+    <form id="capture">
+        <div id="imageContainer">
+            <div style="position: fixed; top: 13.5%; left: 2.2%;" id="circle" name="RT"></div>
+            <div style="position: fixed; top: 13.5%; left: 4.5%;" id="circle" name="heart"></div>
+            <div style="position: fixed; top: 13.5%; left: 7.8%;" id="circle" name="timeline"></div>
+            <div style="position: fixed; top: 13.5%; left: 10.8%;" id="circle" name="subscribe"></div>
+            <div style="position: fixed; top: 13.5%; left: 13.3%;" id="circle" name="day"></div>
+            <div style="position: fixed; top: 13.5%; left: 16.2%;" id="circle" name="yook"></div>
+            <div style="position: fixed; top: 17.2%; left: 3.5%;" id="circle" name="suhee"></div>
+            <div style="position: fixed; top: 27.5%; left: 2%;" id="circle" name="HL"></div>
+            <div style="position: fixed; top: 27.5%; left: 4.2%;" id="circle" name="BL"></div>
+            <div style="position: fixed; top: 27.5%; left: 6.2%;" id="circle" name="GL"></div>
+            <div style="position: fixed; top: 27.5%; left: 8.5%;" id="circle" name="NCP"></div>
+            <div style="position: fixed; top: 27.5%; left: 11.2%;" id="circle" name="dream"></div>
+            <div style="position: fixed; top: 31%; left: 2%;" id="circle" name="write"></div>
+            <div style="position: fixed; top: 31%; left: 4.2%;" id="circle" name="picture"></div>
+            <div style="position: fixed; top: 31%; left: 6%;" id="circle" name="sul"></div>
+            <div style="position: fixed; top: 31%; left: 7.9%;" id="circle" name="sall"></div>
+            <div style="position: fixed; top: 31%; left: 10.9%;" id="circle" name="cosplay"></div>
+            <div style="position: fixed; top: 35%; left: 2.5%;" id="circle" name="mp4"></div>
+            <div style="position: fixed; top: 35%; left: 4.8%;" id="circle" name="MMD"></div>
+            <div style="position: fixed; top: 35%; left: 7.6%;" id="circle" name="goodz"></div>
+            <div style="position: fixed; top: 51.5%; left: 2.6%;" id="circle" name="have"></div>
+            <div style="position: fixed; top: 51.5%; left: 21.2%;" id="circle" name="have2"></div>
+            <div style="position: fixed; top: 60.8%; left: 3.2%;" id="circle" name="sad"></div>
+            <div style="position: fixed; top: 60.8%; left: 10.8%;" id="circle" name="sad2"></div>
+            <div style="position: fixed; top: 60.8%; left: 16.3%;" id="circle" name="sad3"></div>
+            <div style="position: fixed; top: 68.3%; left: 2.5%;" id="circle" name="age"></div>
+            <div style="position: fixed; top: 68.3%; left: 8.4%;" id="circle" name="age2"></div>
+            <div style="position: fixed; top: 68.3%; left: 14.2%;" id="circle" name="age3"></div>
+            <div style="position: fixed; top: 72%; left: 2.5%;" id="circle" name="sex"></div>
+            <div style="position: fixed; top: 72%; left: 8.4%;" id="circle" name="sex2"></div>
+            <div style="position: fixed; top: 72%; left: 14.2%;" id="circle" name="sex3"></div>
+            <div style="position: fixed; top: 23.7%; left: 25.2%;" id="circle" name="sever"></div>
+            <div style="position: fixed; top: 23.7%; left: 41%;" id="circle" name="sever2"></div>
+            <div style="position: fixed; top: 23.7%; left: 46.4%;" id="circle" name="sever3"></div>
+            <div style="position: fixed; top: 23.7%; left: 53.5%;" id="circle" name="sever4"></div>
+            <div style="position: fixed; top: 30%; left: 26.4%;" id="circle" name="Mobile"></div>
+            <div style="position: fixed; top: 30%; left: 29.3%;" id="circle" name="PCC"></div>
+            <div style="position: fixed; top: 30%; left: 33.3%;" id="circle" name="Playstation"></div>
+            <div style="position: fixed; top: 41.9%; left: 23.5%;" id="circle" name="screenshot"></div>
+            <div style="position: fixed; top: 41.9%; left: 27%;" id="circle" name="everyone"></div>
+            <div style="position: fixed; top: 41.9%; left: 31.2%;" id="circle" name="nasaun"></div>
+            <div style="position: fixed; top: 41.9%; left: 34.8%;" id="circle" name="world"></div>
+            <div style="position: fixed; top: 41.9%; left: 39%;" id="circle" name="levelup"></div>
+            <div style="position: fixed; top: 52%; left: 4.9%; color: #ff9090;" id="inputText"></div>
+            <div style="position: fixed; top: 45.7%; left: 25%;" id="circle" name="sevenking"></div>
+            <div style="position: fixed; top: 35.5%; left: 12.5%; color: #ff9090;" id="anyone"></div>
+            <div style="position: fixed; top: 43%; left: 3.5%; color: #ff9090;" id="me"></div>
+            <div style="position: fixed; top: 17.5%; left: 27%; color: #ff9090;" id="level"></div>
+            <div style="position: fixed; top: 11%; left: 29%; color: #ff9090;" id="gameid"></div>
+            <div style="position: fixed; top: 59%; left: 25.5%; color: #ff9090;" id="say"></div>
+            <div style="position: fixed; top: 46%; left: 31.5%; color: #ff9090;" id="anyyy"></div>
+        </div>
+    </form>
+    <button id="saveBtn" style="background-color: blue; color: aliceblue; border-radius: 20%; width: 100px; height: auto; text-align: center; position: absolute; top: 90%; left: 45%;">저장하기</button>
 
     <script>
         function getQueryParams() {
-    var params = {};
-    var queryString = window.location.search.substring(1);
-    var queries = queryString.split("&");
-    for (var i = 0; i < queries.length; i++) {
-        var pair = queries[i].split("=");
-        params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
-    }
-    return params;
-}
+            var params = {};
+            var queryString = window.location.search.substring(1);
+            var queries = queryString.split("&");
+            for (var i = 0; i < queries.length; i++) {
+                var pair = queries[i].split("=");
+                params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+            }
+            return params;
+        }
 
-// 받은 데이터를 페이지에 표시
-window.onload = function() {
-    var params = getQueryParams();
-    document.getElementById("output").innerHTML = 
-        "지역: " + params["map"] + "<br>" + 
-        "게임 ID: " + params["gameid"] + "<br>" + 
-        "캐릭터: " + params["character"] + "<br>" + 
-        "RT: " + params["RT"] + "<br>" + 
-        "Heart: " + params["heart"] + "<br>" + 
-        "TimeLine: " + params["timeline"] + "<br>" + 
-        "subscribe: " + params["subscribe"] + "<br>" + 
-        "day" + params["day"] + "<br>"+
-        "yook: " + params["yook"] + "<br>" +
-        "suhee: " + params["suhee"] + "<br>" +
-        "HL: " + params["HL"] + "<br>" +
-        "BL: " + params["BL"] + "<br>" +
-        "GL: " + params["GL"] + "<br>" +
-        "NCP: " + params["NCP"] + "<br>" +
-        "dream: " + params["dream"] + "<br>" + 
-        "write: " + params["write"] + "<br>" +
-        "picture: " + params["picture"] + "<br>" + 
-        "sul: " + params["sul"] + "<br>" +
-        "sall: " + params["sall"] + "<br>" +
-        "cosplay: " + params["cosplay"] + "<br>" +
-        "mp4: " + params["mp4"] + "<br>" + 
-        "MMD: " + params["MMD"] + "<br>" +
-        "goodz: " + params["goodz"] + "<br>" + 
-        "anyone: " + params["anyone"] + "<br>" + 
-        "me: " + params["me"] + "<br>" +            
-        "have: " + params["have"] + "<br>" +
-        "inputText: " + params["inputText"] + "<br>" + 
-        "sad: " + params["sad"] + "<br>" +
-        "age: " + params["age"] + "<br>" +
-        "sex: " + params["sex"] + "<br>" +
-        "level: " + params["level"] + "<br>" +
-        "sever: " + params["sever"] + "<br>" +  
-        "Mobile: " + params["Mobile"] + "<br>" + 
-        "PC: " + params["PC"] + "<br>" + 
-        "Playstation: " + params["Playstation"] + "<br>" +     
-        "screenshot: " + params["screenshot"] + "<br>" + 
-        "everyone: " + params["everyone"] + "<br>" +  
-        "nasaun: " + params["nasaun"] + "<br>" + 
-        "world: " + params["world"] + "<br>" +
-        "levelup: " + params["levelup"] + "<br>" +
-        "sevenking: " + params["sevenking"] + "<br>" +
-        "anyyy: " + params["anyyy"] + "<br>" + 
-        "say: " + params["say"] + "<br>" + 
-        "fontes: " + params["fontes"] + "<br>";
-};
+        window.onload = function() {
+            var params = getQueryParams();
+            const RT = document.querySelector('div[name="RT"]');
+            const heart = document.querySelector('div[name="heart"]');
+            const timeline = document.querySelector('div[name="timeline"]');
+            const subscribe = document.querySelector('div[name="subscribe"]');
+            const day = document.querySelector('div[name="day"]');
+            const yook = document.querySelector('div[name="yook"]');
+            const suhee = document.querySelector('div[name="suhee"]');
+            const HL = document.querySelector('div[name="HL"]');
+            const BL = document.querySelector('div[name="BL"]');
+            const GL = document.querySelector('div[name="GL"]');
+            const NCP = document.querySelector('div[name="NCP"]');
+            const dream = document.querySelector('div[name="dream"]');
+            const write = document.querySelector('div[name="write"]');
+            const picture = document.querySelector('div[name="picture"]');
+            const sul = document.querySelector('div[name="sul"]');
+            const sall = document.querySelector('div[name="sall"]');
+            const cosplay = document.querySelector('div[name="cosplay"]');
+            const mp4 = document.querySelector('div[name="mp4"]');
+            const MMD = document.querySelector('div[name="MMD"]');
+            const goodz = document.querySelector('div[name="goodz"]');
+            const have = document.querySelector('div[name="have"]');
+            const have2 = document.querySelector('div[name="have2"]');
+            const sad = document.querySelector('div[name="sad"]');
+            const sad2 = document.querySelector('div[name="sad2"]');
+            const sad3 = document.querySelector('div[name="sad3"]');
+            const age = document.querySelector('div[name="age"]');
+            const age2 = document.querySelector('div[name="age2"]');
+            const age3 = document.querySelector('div[name="age3"]');
+            const sex = document.querySelector('div[name="sex"]');
+            const sex2 = document.querySelector('div[name="sex2"]');
+            const sex3 = document.querySelector('div[name="sex3"]');
+            const sever = document.querySelector('div[name="sever"]');
+            const sever2 = document.querySelector('div[name="sever2"]');
+            const sever3 = document.querySelector('div[name="sever3"]');
+            const sever4 = document.querySelector('div[name="sever4"]');
+            const Mobile = document.querySelector('div[name="Mobile"]');
+            const PCC = document.querySelector('div[name="PCC"]');
+            const Playstation = document.querySelector('div[name="Playstation"]');
+            const screenshot = document.querySelector('div[name="screenshot"]');
+            const everyone = document.querySelector('div[name="everyone"]');
+            const nasaun = document.querySelector('div[name="nasaun"]');
+            const world = document.querySelector('div[name="world"]');
+            const levelup = document.querySelector('div[name="levelup"]');
+            const sevenking = document.querySelector('div[name="sevenking"]');
+            RT.style.display = "none";
+            heart.style.display = "none";
+            timeline.style.display = "none";
+            subscribe.style.display = "none";
+            day.style.display = "none";
+            yook.style.display = "none";
+            suhee.style.display = "none";
+            HL.style.display = "none";
+            BL.style.display = "none";
+            GL.style.display = "none";
+            NCP.style.display = "none";
+            dream.style.display = "none";
+            write.style.display = "none";
+            picture.style.display = "none";
+            sul.style.display = "none";
+            sall.style.display = "none";
+            cosplay.style.display = "none";
+            mp4.style.display = "none";
+            MMD.style.display = "none";
+            goodz.style.display = "none";
+            have.style.display = "none";
+            have2.style.display = "none";
+            sad.style.display = "none";
+            sad2.style.display = "none";
+            sad3.style.display = "none";
+            age.style.display = "none";
+            age2.style.display = "none";
+            age3.style.display = "none";
+            sex.style.display = "none";
+            sex2.style.display = "none";
+            sex3.style.display = "none";
+            sever.style.display = "none";
+            sever2.style.display = "none";
+            sever3.style.display = "none";
+            sever4.style.display = "none";
+            Mobile.style.display = "none";
+            PCC.style.display = "none";
+            Playstation.style.display = "none";
+            screenshot.style.display = "none";
+            everyone.style.display = "none";
+            nasaun.style.display = "none";
+            world.style.display = "none";
+            levelup.style.display = "none";
+            sevenking.style.display = "none";
+            const img = document.createElement("img");
+            if(params["fontes"] === "ONE POP"){
+                if(params["map"] === "mond"){
+                if(params["character"] === "캐릭터1"){
+                    console.log("이걸 왜 바여");
+                    img.src = "./background/mond/3MobilePOP.png";  
+                    img.style.width = "1000px";  // 이미지 크기 지정
+                    img.style.height = "auto";  // 비율 유지
+                    document.getElementById("imageContainer").appendChild(img);
+                    var outputDiv = document.getElementById('inputText');
+                    outputDiv.innerHTML = params["inputText"];
+                    outputDiv.style.fontFamily = "ONE Mobile POP"; // 원하는 폰트로 설정
+                    outputDiv.style.fontSize = "medium"; //글자 크기임
+                    var inputDiv = document.getElementById("anyone");
+                    inputDiv.innerHTML = params["anyone"];
+                    inputDiv.style.fontFamily = "ONE Mobile POP";
+                    inputDiv.style.fontSize = "medium"; 
+                    var canDiv = document.getElementById("me");
+                    canDiv.innerHTML = params["me"];
+                    canDiv.style.fontFamily = "ONE Mobile POP";
+                    canDiv.style.fontSize = "medium"; 
 
+                    var doDiv = document.getElementById("level");
+                    doDiv.innerHTML = params["level"];
+                    doDiv.style.fontFamily = "ONE Mobile POP";
+                    doDiv.style.fontSize = "medium"; 
+
+                    var ceDiv = document.getElementById("gameid");
+                    ceDiv.innerHTML = params["gameid"];
+                    ceDiv.style.fontFamily = "ONE Mobile POP";
+                    ceDiv.style.fontSize = "small"; 
+
+                    var deDiv = document.getElementById("say");
+                    deDiv.innerHTML = params["say"];
+                    deDiv.style.fontFamily = "ONE Mobile POP";
+                    deDiv.style.fontSize = "medium"; 
+
+                    var cdeDiv = document.getElementById("anyyy");
+                    cdeDiv.innerHTML = params["anyyy"];
+                    cdeDiv.style.fontFamily = "ONE Mobile POP";
+                    cdeDiv.style.fontSize = "medium"; 
+
+                    if(params["RT"] === "1"){
+                        RT.style.display = "block"
+                    }
+                    if(params["heart"] === "1"){
+                        heart.style.display = "block"
+                    }
+                    if(params["timeline"] === "1"){
+                        timeline.style.display = "block"
+                    }
+                    if(params["subscribe"] === "1"){
+                        subscribe.style.display = "block"
+                    }
+                    if(params["day"] === "1"){
+                        day.style.display = "block"
+                    }
+                    if(params["yook"] === "1"){
+                        yook.style.display = "block"
+                    }
+                    if(params["suhee"] === "1"){
+                        suhee.style.display = "block"
+                    }
+                    if(params["HL"] === "1"){
+                        HL.style.display = "block"
+                    }
+                    if(params["BL"] === "1"){
+                        BL.style.display = "block"
+                    }
+                    if(params["GL"] === "1"){
+                        GL.style.display = "block"
+                    }
+                    if(params["NCP"] === "1"){
+                        NCP.style.display = "block"
+                    }
+                    if(params["dream"] === "1"){
+                        dream.style.display = "block"
+                    }
+                    if(params["write"] === "1"){
+                        write.style.display = "block"
+                    }
+                    if(params["picture"] === "1"){
+                        picture.style.display = "block"
+                    }
+                    if(params["sul"] === "1"){
+                        sul.style.display = "block"
+                    }
+                    if(params["sall"] === "1"){
+                        sall.style.display = "block"
+                    }
+                    if(params["cosplay"] === "1"){
+                        cosplay.style.display = "block"
+                    }
+                    if(params["mp4"] === "1"){
+                        mp4.style.display = "block"
+                    }
+                    if(params["MMD"] === "1"){
+                        MMD.style.display = "block"
+                    }
+                    if(params["goodz"] === "1"){
+                        goodz.style.display = "block"
+                    }
+                    if(params["have"] === "yes"){
+                        have.style.display = "block"
+                    }
+                    if(params["have"] === "no"){
+                        have2.style.display = "block"
+                    }
+                    if(params["sad"] === "bye"){
+                        sad.style.display = "block"
+                    }
+                    if(params["sad"] === "bob"){
+                        sad2.style.display = "block"
+                    }
+                    if(params["sad"] === "blak"){
+                        sad3.style.display = "block"
+                    }
+                    if(params["age"] === "20up"){
+                        age.style.display = "block"
+                    }
+                    if(params["age"] === "20down"){
+                        age2.style.display = "block"
+                    }
+                    if(params["age"] === "nothink"){
+                        age3.style.display = "block"
+                    }
+                    if(params["sex"] === "male"){
+                        sex.style.display = "block"
+                    }
+                    if(params["sex"] === "female"){
+                        sex2.style.display = "block"
+                    }
+                    if(params["sex"] === "nothanks"){
+                        sex3.style.display = "block"
+                    }
+                    if(params["sever"] === "Asia"){
+                        sever.style.display = "block"
+                    }
+                    if(params["sever"] === "Americ"){
+                        sever2.style.display = "block"
+                    }
+                    if(params["sever"] === "Europe"){
+                        sever3.style.display = "block"
+                    }
+                    if(params["sever"] === "TW/HK/MO"){
+                        sever4.style.display = "block"
+                    }
+                    if(params["Mobile"] === "1"){
+                        Mobile.style.display = "block"
+                    }
+                    if(params["PCC"] === "1"){
+                        PCC.style.display = "block"
+                    }
+                    if(params["Playstation"] === "1"){
+                        Playstation.style.display = "block"
+                    }
+                    if(params["screenshot"] === "1"){
+                        screenshot.style.display = "block"
+                    }
+                    if(params["everyone"] === "1"){
+                        everyone.style.display = "block"
+                    }
+                    if(params["nasaun"] === "1"){
+                        nasaun.style.display = "block"
+                    }
+                    if(params["world"] === "1"){
+                        world.style.display = "block"
+                    }
+                    if(params["levelup"] === "1"){
+                        levelup.style.display = "block"
+                    }
+                    if(params["sevenking"] === "1"){
+                        sevenking.style.display = "block"
+                    }
+                } 
+                
+                
+                
+                
+                
+                else if(params["character"] === "캐릭터2"){
+                    img.src = ""; 
+                    document.getElementById("imageContainer").appendChild(img);
+                }
+            }
+        };
+            }
+            
+
+        document.getElementById("saveBtn").addEventListener("click", function() {
+            html2canvas(document.querySelector("#capture")).then(canvas => {
+                let link = document.createElement("a");
+                link.download = 'captured-image.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        });
     </script>
 </body>
 </html>

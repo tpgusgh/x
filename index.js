@@ -1,6 +1,3 @@
-
-
-
 function handleMapChange(){
     var gen = document.forms["gen"];
     var characterSelect = gen.character;
@@ -333,12 +330,12 @@ function doyouhave() {
     else{
         Mobile.value=0
     }
-    let PC = document.getElementById("PC");
-    if(PC.checked){
-        PC.value=1
+    let PCC = document.getElementById("PCC");
+    if(PCC.checked){
+        PCC.value=1
     }
     else{
-        PC.value=0
+        PCC.value=0
     }
     let Playstation = document.getElementById("Playstation");
     if(Playstation.checked){
@@ -434,8 +431,8 @@ function doyouhave() {
     var sex = gen.sex.value;
     var level = gen.level.value;
     var sever = gen.sever.value;
-    var Moblie = gen.Mobile.value;
-    var PC = gen.PC.value;
+    var Mobile = gen.Mobile.value;
+    var PCC = gen.PCC.value;
     var Playstation = gen.Playstation.value;
     var screenshot = gen.screenshot.value;
     var everyone = gen.everyone.value;
@@ -483,6 +480,9 @@ function doyouhave() {
     "&sex=" + encodeURIComponent(sex) +
     "&level=" + encodeURIComponent(level) +
     "&sever=" + encodeURIComponent(sever) +
+    "&Mobile=" + encodeURIComponent(Mobile) +
+    "&PCC=" + encodeURIComponent(PCC) +
+    "&Playstation=" + encodeURIComponent(Playstation) +
     "&screenshot=" + encodeURIComponent(screenshot) +
     "&everyone=" + encodeURIComponent(everyone) +
     "&nasaun=" + encodeURIComponent(nasaun) +
