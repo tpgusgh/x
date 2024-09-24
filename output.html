@@ -7,69 +7,88 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <style>
-   #circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;      /* 원형 모양 만들기 */
-    border: 2px solid rgb(0, 201, 201); /* 외곽선 추가 */
-}
+    /* 이미지 컨테이너와 동그라미 스타일 */
+    .imageContainer {
+            position: relative;
+            width: 1000px; /* 이미지 크기에 맞춰 수정 */
+            height: auto; /* 이미지 크기에 맞춰 수정 */
+            border: 1px solid #000;
+        }
 
+        /* 공통 동그라미 스타일 */
+        .circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgb(0, 201, 201);
+            position: absolute; /* 이미지 내부에서 고정 */
+        }
+
+        /* 텍스트 스타일 */
+        .text {
+            position: absolute;
+            color: #ff9090;
+            font-size: 14px;
+            font-weight: bold;
+        }
 </style>
 <body>
     
     <form id="capture">
-        <div id="imageContainer">
-            <div style="position: fixed; top: 13.5%; left: 2.2%;" id="circle" name="RT"></div>
-            <div style="position: fixed; top: 13.5%; left: 4.5%;" id="circle" name="heart"></div>
-            <div style="position: fixed; top: 13.5%; left: 7.8%;" id="circle" name="timeline"></div>
-            <div style="position: fixed; top: 13.5%; left: 10.8%;" id="circle" name="subscribe"></div>
-            <div style="position: fixed; top: 13.5%; left: 13.3%;" id="circle" name="day"></div>
-            <div style="position: fixed; top: 13.5%; left: 16.2%;" id="circle" name="yook"></div>
-            <div style="position: fixed; top: 17.2%; left: 3.5%;" id="circle" name="suhee"></div>
-            <div style="position: fixed; top: 27.5%; left: 2%;" id="circle" name="HL"></div>
-            <div style="position: fixed; top: 27.5%; left: 4.2%;" id="circle" name="BL"></div>
-            <div style="position: fixed; top: 27.5%; left: 6.2%;" id="circle" name="GL"></div>
-            <div style="position: fixed; top: 27.5%; left: 8.5%;" id="circle" name="NCP"></div>
-            <div style="position: fixed; top: 27.5%; left: 11.2%;" id="circle" name="dream"></div>
-            <div style="position: fixed; top: 31%; left: 2%;" id="circle" name="write"></div>
-            <div style="position: fixed; top: 31%; left: 4.2%;" id="circle" name="picture"></div>
-            <div style="position: fixed; top: 31%; left: 6%;" id="circle" name="sul"></div>
-            <div style="position: fixed; top: 31%; left: 7.9%;" id="circle" name="sall"></div>
-            <div style="position: fixed; top: 31%; left: 10.9%;" id="circle" name="cosplay"></div>
-            <div style="position: fixed; top: 35%; left: 2.5%;" id="circle" name="mp4"></div>
-            <div style="position: fixed; top: 35%; left: 4.8%;" id="circle" name="MMD"></div>
-            <div style="position: fixed; top: 35%; left: 7.6%;" id="circle" name="goodz"></div>
-            <div style="position: fixed; top: 51.5%; left: 2.6%;" id="circle" name="have"></div>
-            <div style="position: fixed; top: 51.5%; left: 21.2%;" id="circle" name="have2"></div>
-            <div style="position: fixed; top: 60.8%; left: 3.2%;" id="circle" name="sad"></div>
-            <div style="position: fixed; top: 60.8%; left: 10.8%;" id="circle" name="sad2"></div>
-            <div style="position: fixed; top: 60.8%; left: 16.3%;" id="circle" name="sad3"></div>
-            <div style="position: fixed; top: 68.3%; left: 2.5%;" id="circle" name="age"></div>
-            <div style="position: fixed; top: 68.3%; left: 8.4%;" id="circle" name="age2"></div>
-            <div style="position: fixed; top: 68.3%; left: 14.2%;" id="circle" name="age3"></div>
-            <div style="position: fixed; top: 72%; left: 2.5%;" id="circle" name="sex"></div>
-            <div style="position: fixed; top: 72%; left: 8.4%;" id="circle" name="sex2"></div>
-            <div style="position: fixed; top: 72%; left: 14.2%;" id="circle" name="sex3"></div>
-            <div style="position: fixed; top: 23.7%; left: 25.2%;" id="circle" name="sever"></div>
-            <div style="position: fixed; top: 23.7%; left: 41%;" id="circle" name="sever2"></div>
-            <div style="position: fixed; top: 23.7%; left: 46.4%;" id="circle" name="sever3"></div>
-            <div style="position: fixed; top: 23.7%; left: 53.5%;" id="circle" name="sever4"></div>
-            <div style="position: fixed; top: 30%; left: 26.4%;" id="circle" name="Mobile"></div>
-            <div style="position: fixed; top: 30%; left: 29.3%;" id="circle" name="PCC"></div>
-            <div style="position: fixed; top: 30%; left: 33.3%;" id="circle" name="Playstation"></div>
-            <div style="position: fixed; top: 41.9%; left: 23.5%;" id="circle" name="screenshot"></div>
-            <div style="position: fixed; top: 41.9%; left: 27%;" id="circle" name="everyone"></div>
-            <div style="position: fixed; top: 41.9%; left: 31.2%;" id="circle" name="nasaun"></div>
-            <div style="position: fixed; top: 41.9%; left: 34.8%;" id="circle" name="world"></div>
-            <div style="position: fixed; top: 41.9%; left: 39%;" id="circle" name="levelup"></div>
-            <div style="position: fixed; top: 52%; left: 4.9%; color: #ff9090;" id="inputText"></div>
-            <div style="position: fixed; top: 45.7%; left: 25%;" id="circle" name="sevenking"></div>
-            <div style="position: fixed; top: 35.5%; left: 12.5%; color: #ff9090;" id="anyone"></div>
-            <div style="position: fixed; top: 43%; left: 3.5%; color: #ff9090;" id="me"></div>
-            <div style="position: fixed; top: 17.5%; left: 27%; color: #ff9090;" id="level"></div>
-            <div style="position: fixed; top: 11%; left: 29%; color: #ff9090;" id="gameid"></div>
-            <div style="position: fixed; top: 59%; left: 25.5%; color: #ff9090;" id="say"></div>
-            <div style="position: fixed; top: 46%; left: 31.5%; color: #ff9090;" id="anyyy"></div>
+        <div class="imageContainer" id="imageContainer">
+            <div class="circle" style="top: 13.5%; left: 2.2%;" name="RT"></div>
+            <div class="circle" style="top: 13.5%; left: 4.5%;" name="heart"></div>
+            <div class="circle" style="top: 13.5%; left: 7.8%;" name="timeline"></div>
+            <div class="circle" style="top: 13.5%; left: 10.8%;" name="subscribe"></div>
+            <div class="circle" style="top: 13.5%; left: 13.3%;" name="day"></div>
+            <div class="circle" style="top: 13.5%; left: 16.2%;" name="yook"></div>
+            <div class="circle" style="top: 17.2%; left: 3.5%;" name="suhee"></div>
+            <div class="circle" style="top: 27.5%; left: 2%;" name="HL"></div>
+            <div class="circle" style="top: 27.5%; left: 4.2%;" name="BL"></div>
+            <div class="circle" style="top: 27.5%; left: 6.2%;" name="GL"></div>
+            <div class="circle" style="top: 27.5%; left: 8.5%;" name="NCP"></div>
+            <div class="circle" style="top: 27.5%; left: 11.2%;" name="dream"></div>
+            <div class="circle" style="top: 31%; left: 2%;" name="write"></div>
+            <div class="circle" style="top: 31%; left: 4.2%;" name="picture"></div>
+            <div class="circle" style="top: 31%; left: 6%;" name="sul"></div>
+            <div class="circle" style="top: 31%; left: 7.9%;" name="sall"></div>
+            <div class="circle" style="top: 31%; left: 10.9%;" name="cosplay"></div>
+            <div class="circle" style="top: 35%; left: 2.5%;" name="mp4"></div>
+            <div class="circle" style="top: 35%; left: 4.8%;" name="MMD"></div>
+            <div class="circle" style="top: 35%; left: 7.6%;" name="goodz"></div>
+            <div class="circle" style="top: 51.5%; left: 2.6%;" name="have"></div>
+            <div class="circle" style="top: 51.5%; left: 14.8%;" name="have2"></div>
+            <div class="circle" style="top: 60.8%; left: 3.2%;" name="sad"></div>
+            <div class="circle" style="top: 60.8%; left: 7.7%;" name="sad2"></div>
+            <div class="circle" style="top: 60.8%; left: 11.5%;" name="sad3"></div>
+            <div class="circle" style="top: 68.3%; left: 2.5%;" name="age"></div>
+            <div class="circle" style="top: 68.3%; left: 6%;" name="age2"></div>
+            <div class="circle" style="top: 68.3%; left: 10%;" name="age3"></div>
+            <div class="circle" style="top: 72%; left: 2.5%;" name="sex"></div>
+            <div class="circle" style="top: 72%; left: 6%;" name="sex2"></div>
+            <div class="circle" style="top: 72%; left: 10%;" name="sex3"></div>
+            <div class="circle" style="top: 23.7%; left: 25.2%;" name="sever"></div>
+            <div class="circle" style="top: 23.7%; left: 41%;" name="sever2"></div>
+            <div class="circle" style="top: 23.7%; left: 46.4%;" name="sever3"></div>
+            <div class="circle" style="top: 23.7%; left: 53.5%;" name="sever4"></div>
+            <div class="circle" style="top: 30%; left: 26.4%;" name="Mobile"></div>
+            <div class="circle" style="top: 30%; left: 29.3%;" name="PCC"></div>
+            <div class="circle" style="top: 30%; left: 33.3%;" name="Playstation"></div>
+            <div class="circle" style="top: 41.9%; left: 23.5%;" name="screenshot"></div>
+            <div class="circle" style="top: 41.9%; left: 27%;" name="everyone"></div>
+            <div class="circle" style="top: 41.9%; left: 31.2%;" name="nasaun"></div>
+            <div class="circle" style="top: 41.9%; left: 34.8%;" name="world"></div>
+            <div class="circle" style="top: 41.9%; left: 39%;" name="levelup"></div>
+            <div class="circle" style="top: 45.7%; left: 25%;" name="sevenking"></div>
+    
+            <!-- 텍스트들 -->
+            <div class="text" style="top: 52%; left: 4.9%;" id="inputText">inputText</div>
+            <div class="text" style="top: 35.5%; left: 12.5%;" id="anyone">anyone</div>
+            <div class="text" style="top: 43%; left: 3.5%;" id="me">me</div>
+            <div class="text" style="top: 17.5%; left: 27%;" id="level">level</div>
+            <div class="text" style="top: 11%; left: 29%;" id="gameid">gameid</div>
+            <div class="text" style="top: 59%; left: 25.5%;" id="say">say</div>
+            <div class="text" style="top: 46%; left: 31.5%;" id="anyyy">anyyy</div>
         </div>
     </form>
     <button id="saveBtn" style="background-color: blue; color: aliceblue; border-radius: 20%; width: 100px; height: auto; text-align: center; position: absolute; top: 90%; left: 45%;">저장하기</button>
@@ -365,14 +384,19 @@
             }
             
 
-        document.getElementById("saveBtn").addEventListener("click", function() {
-            html2canvas(document.querySelector("#capture")).then(canvas => {
-                let link = document.createElement("a");
-                link.download = 'captured-image.png';
-                link.href = canvas.toDataURL();
-                link.click();
-            });
-        });
+            document.getElementById("saveBtn").addEventListener("click", function() {
+    const element = document.getElementById("imageContainer"); // 캡처할 요소
+    html2canvas(element, {
+        backgroundColor: null, // 배경을 투명하게 설정
+        scale: 2 // 이미지 품질을 위해 스케일 조정
+    }).then(function(canvas) {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL(); // 이미지 URL 생성
+        link.download = 'capture.png'; // 파일 이름 설정
+        link.click(); // 다운로드 실행
+    });
+});
+
     </script>
 </body>
 </html>
