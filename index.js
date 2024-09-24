@@ -1,3 +1,6 @@
+
+
+
 function handleMapChange(){
     var gen = document.forms["gen"];
     var characterSelect = gen.character;
@@ -123,12 +126,378 @@ function handleMapChange(){
 
 function doyouhave() {
     const selectedValue = document.querySelector('input[name="have"]:checked').value;
-    
     const textBox = document.getElementById('inputText');
     
     if (selectedValue === 'yes') {
       textBox.readOnly = false;
     } else {
       textBox.readOnly = true;
+      textBox.value= '';
     }
   }
+
+
+
+  function changeFont() {
+    const selectedFont = document.gen.fontes.value; // 선택한 폰트 값을 가져옴
+    const textInput = document.getElementById('fonter'); // 텍스트 박스 요소를 가져옴
+
+    // 선택한 폰트에 따라 텍스트 박스의 폰트 패밀리 변경
+    if (selectedFont === "ONE POP") {
+      textInput.style.fontFamily = "'ONE Mobile POP'";  // 정확한 폰트 이름 사용
+    } 
+    else if (selectedFont === "Pretendard") {
+      textInput.style.fontFamily = "'Pretendard-ExtraBold'";  // 정확한 폰트 이름 사용
+    }
+    else if(selectedFont === "textbase"){
+        textInput.style.fontFamily = "''";
+    }
+  }
+  function sendDataBefore(){
+    let checkbox = document.getElementById("RT");
+    if(checkbox.checked){
+        checkbox.value=1
+    }
+    else{
+        checkbox.value=0
+    }
+    
+    let checkboxs = document.getElementById("heart");
+    if(checkboxs.checked){
+        checkboxs.value=1
+    }
+    else{
+        checkboxs.value=0
+    }
+    
+    let timeline = document.getElementById("timeline");
+    if(timeline.checked){
+        timeline.value=1
+    }
+    else{
+        timeline.value=0
+    }
+
+    let subscribe = document.getElementById("subscribe");
+    if(subscribe.checked){
+        subscribe.value=1
+    }
+    else{
+        subscribe.value=0
+    }
+
+
+    let day = document.getElementById("day");
+    if(day.checked){
+        day.value=1
+    }
+    else{
+        day.value=0
+    }
+
+    let yook = document.getElementById("yook");
+    if(yook.checked){
+        yook.value=1
+    }
+    else{
+        yook.value=0
+    }
+
+    let suhee = document.getElementById("suhee");
+    if(suhee.checked){
+        suhee.value=1
+    }
+    else{
+        suhee.value=0
+    }
+
+    let HL = document.getElementById("HL");
+    if(HL.checked){
+        HL.value=1
+    }
+    else{
+        HL.value=0
+    }
+
+    let BL = document.getElementById("BL");
+    if(BL.checked){
+        BL.value=1
+    }
+    else{
+        BL.value=0
+    }
+
+    let GL = document.getElementById("GL");
+    if(GL.checked){
+        GL.value=1
+    }
+    else{
+        GL.value=0
+    }
+
+
+    let NCP = document.getElementById("NCP");
+    if(NCP.checked){
+        NCP.value=1
+    }
+    else{
+        NCP.value=0
+    }
+
+    let dream = document.getElementById("dream");
+    if(dream.checked){
+        dream.value=1
+    }
+    else{
+        dream.value=0
+    }
+
+    let write = document.getElementById("write");
+    if(write.checked){
+        write.value=1
+    }
+    else{
+        write.value=0
+    }
+    let picture = document.getElementById("picture");
+    if(picture.checked){
+        picture.value=1
+    }
+    else{
+        picture.value=0
+    }
+    let sul = document.getElementById("sul");
+    if(sul.checked){
+        sul.value=1
+    }
+    else{
+        sul.value=0
+    }
+    let sall = document.getElementById("sall");
+    if(sall.checked){
+        sall.value=1
+    }
+    else{
+        sall.value=0
+    }
+
+    let cosplay = document.getElementById("cosplay");
+    if(cosplay.checked){
+        cosplay.value=1
+    }
+    else{
+        cosplay.value=0
+    }
+
+
+    let mp4 = document.getElementById("mp4");
+    if(mp4.checked){
+        mp4.value=1
+    }
+    else{
+        mp4.value=0
+    }
+
+    let MMD = document.getElementById("MMD");
+    if(MMD.checked){
+        MMD.value=1
+    }
+    else{
+        MMD.value=0
+    }
+
+    let goodz = document.getElementById("goodz");
+    if(goodz.checked){
+        goodz.value=1
+    }
+    else{
+        goodz.value=0
+    }
+    let have = document.getElementsByName("have");
+    let selectedValue;
+
+    for(let i = 0; i < have.length; i++) {
+        if (have[i].checked) {
+            selectedValue = have[i].value;
+            break;
+        }
+    }
+
+    // 이제 selectedValue에 선택된 'have'의 값이 저장됩니다.
+    console.log(selectedValue); // 'yes' 또는 'no'
+
+    let Mobile = document.getElementById("Mobile");
+    if(Mobile.checked){
+        Mobile.value=1
+    }
+    else{
+        Mobile.value=0
+    }
+    let PC = document.getElementById("PC");
+    if(PC.checked){
+        PC.value=1
+    }
+    else{
+        PC.value=0
+    }
+    let Playstation = document.getElementById("Playstation");
+    if(Playstation.checked){
+        Playstation.value=1
+    }
+    else{
+        Playstation.value=0
+    }
+    let screenshot = document.getElementById("screenshot");
+    if(screenshot.checked){
+        screenshot.value=1
+    }
+    else{
+        screenshot.value=0
+    }
+    let everyone = document.getElementById("everyone");
+    if(everyone.checked){
+        everyone.value=1
+    }
+    else{
+        everyone.value=0
+    }
+    let nasaun = document.getElementById("nasaun");
+    if(nasaun.checked){
+        nasaun.value=1
+    }
+    else{
+        nasaun.value=0
+    }
+
+
+    let world = document.getElementById("world");
+    if(world.checked){
+        world.value=1
+    }
+    else{
+        world.value=0
+    }
+    let levelup = document.getElementById("levelup");
+    if(levelup.checked){
+        levelup.value=1
+    }
+    else{
+        levelup.value=0
+    }
+    let sevenking = document.getElementById("sevenking");
+    if(sevenking.checked){
+        sevenking.value=1
+    }
+    else{
+        sevenking.value=0
+    }
+
+    let fontaa = document.getElementsByName("fontes")[0]; // select 요소를 가져옴
+    let selectedValues = fontaa.options[fontaa.selectedIndex].value;
+    
+    console.log(selectedValues); // 선택된 option의 값이 출력됨
+    sendData()
+
+  
+  }
+  function sendData() {
+    var gen = document.forms["gen"];
+    var RT = gen.RT.value;
+    var map = gen.map.value;
+    var gameid = gen.gameid.value;
+    var character = gen.character.value;
+    var heart = gen.heart.value;
+    var timeline = gen.timeline.value;
+    var subscribe = gen.subscribe.value;
+    var day = gen.day.value;
+    var yook = gen.yook.value;
+    var suhee = gen.suhee.value;
+    var HL = gen.HL.value;
+    var BL = gen.BL.value;
+    var GL = gen.GL.value;
+    var NCP = gen.NCP.value;
+    var dream = gen.dream.value;
+    var write = gen.write.value;
+    var picture = gen.picture.value;
+    var sul = gen.sul.value;
+    var sall = gen.sall.value;
+    var cosplay = gen.cosplay.value;
+    var mp4 = gen.mp4.value;
+    var MMD = gen.MMD.value;
+    var goodz = gen.goodz.value;
+    var anyone = gen.anyone.value;
+    var me = gen.me.value;
+    var have = gen.have.value;
+    var inputText = gen.inputText.value;
+    var sad = gen.sad.value;
+    var age = gen.age.value;
+    var sex = gen.sex.value;
+    var level = gen.level.value;
+    var sever = gen.sever.value;
+    var Moblie = gen.Mobile.value;
+    var PC = gen.PC.value;
+    var Playstation = gen.Playstation.value;
+    var screenshot = gen.screenshot.value;
+    var everyone = gen.everyone.value;
+    var nasaun = gen.nasaun.value;
+    var world = gen.world.value;
+    var levelup = gen.levelup.value;
+    var sevenking = gen.sevenking.value;
+    var anyyy = gen.anyyy.value;
+    var say = gen.say.value;
+    var fontes = gen.fontes.value;
+
+
+
+
+    // 새로운 페이지로 데이터 전송 (GET 방식으로 URL에 포함)
+    var url = "output.html?map=" + encodeURIComponent(map) + 
+    "&gameid=" + encodeURIComponent(gameid) + 
+    "&character=" + encodeURIComponent(character) + 
+    "&RT=" + encodeURIComponent(RT) + 
+    "&heart=" + encodeURIComponent(heart) + 
+    "&timeline=" + encodeURIComponent(timeline) +
+    "&subscribe=" + encodeURIComponent(subscribe) +
+    "&day=" + encodeURIComponent(day) +
+    "&yook=" + encodeURIComponent(yook) + 
+    "&suhee=" + encodeURIComponent(suhee) + 
+    "&HL=" + encodeURIComponent(HL) + 
+    "&BL=" + encodeURIComponent(BL) +
+    "&GL=" + encodeURIComponent(GL) +
+    "&NCP=" + encodeURIComponent(NCP) +
+    "&dream=" + encodeURIComponent(dream) +
+    "&write=" + encodeURIComponent(write) +
+    "&picture=" + encodeURIComponent(picture) + 
+    "&sul=" + encodeURIComponent(sul) + 
+    "&sall=" + encodeURIComponent(sall) +
+    "&cosplay=" + encodeURIComponent(cosplay) +
+    "&mp4=" + encodeURIComponent(mp4) +
+    "&MMD=" + encodeURIComponent(MMD) +
+    "&goodz=" + encodeURIComponent(goodz) +
+    "&anyone=" + encodeURIComponent(anyone) +
+    "&me=" + encodeURIComponent(me) +
+    "&have=" + encodeURIComponent(have) +
+    "&inputText=" + encodeURIComponent(inputText) +
+    "&sad=" + encodeURIComponent(sad) +
+    "&age=" + encodeURIComponent(age) +
+    "&sex=" + encodeURIComponent(sex) +
+    "&level=" + encodeURIComponent(level) +
+    "&sever=" + encodeURIComponent(sever) +
+    "&screenshot=" + encodeURIComponent(screenshot) +
+    "&everyone=" + encodeURIComponent(everyone) +
+    "&nasaun=" + encodeURIComponent(nasaun) +
+    "&world=" + encodeURIComponent(world) +
+    "&levelup=" + encodeURIComponent(levelup) +
+    "&sevenking=" + encodeURIComponent(sevenking) +
+    "&anyyy=" + encodeURIComponent(anyyy) +
+    "&say=" + encodeURIComponent(say) +
+    "&fontes=" + encodeURIComponent(fontes);
+    window.location.href = url;
+}
+
+
+function myFunction() {
+    handleMapChange()
+    changeFont()
+    
+}

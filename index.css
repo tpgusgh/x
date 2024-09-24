@@ -1,0 +1,7 @@
+input{
+    font-size: medium;
+}
+body{
+    background: url(background.jpg) no-repeat center;
+    background-size: cover;
+}

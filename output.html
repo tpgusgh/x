@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>받은 데이터</title>
+</head>
+<body>
+    <h1>받은 폼 데이터</h1>
+    <p id="output"></p>
+
+    <script>
+        function getQueryParams() {
+    var params = {};
+    var queryString = window.location.search.substring(1);
+    var queries = queryString.split("&");
+    for (var i = 0; i < queries.length; i++) {
+        var pair = queries[i].split("=");
+        params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+    }
+    return params;
+}
+
+// 받은 데이터를 페이지에 표시
+window.onload = function() {
+    var params = getQueryParams();
+    document.getElementById("output").innerHTML = 
+        "지역: " + params["map"] + "<br>" + 
+        "게임 ID: " + params["gameid"] + "<br>" + 
+        "캐릭터: " + params["character"] + "<br>" + 
+        "RT: " + params["RT"] + "<br>" + 
+        "Heart: " + params["heart"] + "<br>" + 
+        "TimeLine: " + params["timeline"] + "<br>" + 
+        "subscribe: " + params["subscribe"] + "<br>" + 
+        "day" + params["day"] + "<br>"+
+        "yook: " + params["yook"] + "<br>" +
+        "suhee: " + params["suhee"] + "<br>" +
+        "HL: " + params["HL"] + "<br>" +
+        "BL: " + params["BL"] + "<br>" +
+        "GL: " + params["GL"] + "<br>" +
+        "NCP: " + params["NCP"] + "<br>" +
+        "dream: " + params["dream"] + "<br>" + 
+        "write: " + params["write"] + "<br>" +
+        "picture: " + params["picture"] + "<br>" + 
+        "sul: " + params["sul"] + "<br>" +
+        "sall: " + params["sall"] + "<br>" +
+        "cosplay: " + params["cosplay"] + "<br>" +
+        "mp4: " + params["mp4"] + "<br>" + 
+        "MMD: " + params["MMD"] + "<br>" +
+        "goodz: " + params["goodz"] + "<br>" + 
+        "anyone: " + params["anyone"] + "<br>" + 
+        "me: " + params["me"] + "<br>" +            
+        "have: " + params["have"] + "<br>" +
+        "inputText: " + params["inputText"] + "<br>" + 
+        "sad: " + params["sad"] + "<br>" +
+        "age: " + params["age"] + "<br>" +
+        "sex: " + params["sex"] + "<br>" +
+        "level: " + params["level"] + "<br>" +
+        "sever: " + params["sever"] + "<br>" +  
+        "Mobile: " + params["Mobile"] + "<br>" + 
+        "PC: " + params["PC"] + "<br>" + 
+        "Playstation: " + params["Playstation"] + "<br>" +     
+        "screenshot: " + params["screenshot"] + "<br>" + 
+        "everyone: " + params["everyone"] + "<br>" +  
+        "nasaun: " + params["nasaun"] + "<br>" + 
+        "world: " + params["world"] + "<br>" +
+        "levelup: " + params["levelup"] + "<br>" +
+        "sevenking: " + params["sevenking"] + "<br>" +
+        "anyyy: " + params["anyyy"] + "<br>" + 
+        "say: " + params["say"] + "<br>" + 
+        "fontes: " + params["fontes"] + "<br>";
+};
+
+    </script>
+</body>
+</html>

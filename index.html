@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>미릉</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <div style="border: 1px ; background-color: #c6ebf2;">
-        <form name="gen">
+<body onload="myFunction()">
+    <div style="border: 1px ; background-color: #c6ebf2; width: 75%; position: absolute; right: 15%;">
+        
+        <form name="gen" style="text-align: center;">
+            <br>
             <a style="color: #000;text-shadow: 
             -5px -5px 0 #FFF,  
             5px -5px 0 #FFF,
             -5px 5px 0 #FFF,
             5px 5px 0 #FFF;
             font-family: ONE Mobile POP;
-            font-size: 50px;
+            font-size: 40px;
             font-style: normal;
             font-weight: 300;
             line-height: normal;">트친표 작성하기</a>
@@ -29,90 +32,156 @@
                 <option value="phontain">폰타인</option>
                 <option value="anyting">기타</option>
             </select>
-            <select name="character">
+            <select name="character" id="character">
             </select>
             <br>
+            <br>
             <b>트윗 성향</b>
-            <input type="radio" name="RT" value="RT">RT
-            <input type="radio" name="heart" value="마음">마음
-            <input type="radio" name="timeline" value="탐라대화">탐라대화
-            <input type="radio" name="subscribe" value="구독">구독
-            <input type="radio" name="day" value="일상트">일상트
-            <input type="radio" name="yook" value="욕트">욕트
-            <input type="radio" name="suhee" value="수위">수위(19)
+            <input type="checkbox"  id="RT" name="RT" value="0">RT
+            <input type="checkbox" id="heart"  name="heart" value="0">마음
+            <input type="checkbox" id="timeline"  name="timeline" value="0">탐라대화
+            <input type="checkbox" name="subscribe" id="subscribe" value="0">구독
+            <input type="checkbox" name="day" id="day"  value="0">일상트
+            <input type="checkbox" name="yook" id="yook" value="0">욕트
+            <input type="checkbox" name="suhee" id="suhee" value="0">수위(19)
+            <br>
             <br>
             <b>덕질 성향</b>
-            <input type="radio" name="HL" value="HL">HL
-            <input type="radio" name="BL" value="BL">BL
-            <input type="radio" name="GL" value="GL">GL
-            <input type="radio" name="NCP" value="NCP">NCP
-            <input type="radio" name="dream" value="드림">드림
-            <input type="radio" name="write" value="글">글
-            <input type="radio" name="picture" value="그림">그림
-            <input type="radio" name="sul" value="썰">썰
-            <input type="radio" name="sall" value="소비">소비
-            <input type="radio" name="cosplay" value="코스프레">코스프레
-            <input type="radio" name="mp4" value="영상">영상
-            <input type="radio" name="MMD" value="MMD">MMD
-            <input type="radio" name="goodz" value="굿즈">굿즈
-            <input type="text" name="any" placeholder="기타..">
+            <input type="checkbox"  id="HL" name="HL" id="" value="0">HL
+            <input type="checkbox"  id="BL" name="BL" value="0">BL
+            <input type="checkbox"  id="GL" name="GL" value="0">GL
+            <input type="checkbox"  id="NCP" name="NCP" value="0">NCP
+            <input type="checkbox"  id="dream" name="dream" value="0">드림
+            <input type="checkbox"  id="write" name="write" value="0">글
+            <input type="checkbox"  id="picture" name="picture" value="0">그림
+            <input type="checkbox"  id="sul" name="sul" value="0">썰
+            <input type="checkbox"  id="sall" name="sall" value="0">소비
+            <input type="checkbox"  id="cosplay" name="cosplay" value="0">코스프레
+            <input type="checkbox"  id="mp4" name="mp4" value="0">영상
+            <input type="checkbox"  id="MMD" name="MMD" value="0">MMD
+            <input type="checkbox"  id="goodz" name="goodz" value="0">굿즈 
+            <span>ㅤ</span>
+            <input type="text" name="anyone" placeholder="기타..">
+            <br>
             <br>
             <b>지뢰</b>
             <input type="text" name="me" placeholder="지뢰">
             <br>
+            <br>
             <b>타장르</b>
             <div onchange="doyouhave()">
-                <input type="radio" name="have" value="yes" checked>yes
+                <input type="radio" id="have" name="have" value="yes" checked>yes
                 <input type="text" id="inputText">
-                <input type="radio" name="have" value="no">no
+                <input type="radio" id="have" name="have" value="no">no
             </div>
             <br>
+
             <b>이별</b>
-            <input type="radio" name="sad" value="이별">언팔로우
-            <input type="radio" name="sad" value="블언블">블언블
-            <input type="radio" name="sad" value="블락">블락
+
+            <input type="radio" name="sad" value="bye">언팔로우
+            <input type="radio" name="sad" value="bob">블언블
+            <input type="radio" name="sad" value="blak">블락
+            <br>
             <br>
             <b>나이</b>
             <input type="radio" name="age" value="20up">20up
             <input type="radio" name="age" value="20down">20down
-            <input type="radio" name="age" value="비공개">비공개
+            <input type="radio" name="age" value="nothink">비공개
+            <br>
             <br>
             <b>성별</b>
-            <input type="radio" name="sex" value="남성">남자
-            <input type="radio" name="sex" value="여성">여성
-            <input type="radio" name="sex" value="비공개">비공개
+            <input type="radio" name="sex" value="male">남자
+            <input type="radio" name="sex" value="female">여성
+            <input type="radio" name="sex" value="nothanks">비공개
+            <br>
             <br>
             <b>닉네임/UID</b>
             <input style="width: 180px;" type="text" name="gameid" placeholder="예:천사의노래/833366718">
             <br>
+            <br>
             <b>모험레벨</b>
             <input style="width: 50px;" type="text" name="level" placeholder="예:58">
             <br>
+            <br>
             <b>서버</b>
-            <input type="radio" name="sever" value="Asia">Asia
+            <input type="radio" name="sever" value="Asia" checked>Asia
             <input type="radio" name="sever" value="Americ">Americ
             <input type="radio" name="sever" value="Europe">Europe
             <input type="radio" name="sever" value="TW/HK/MO">TW/HK/MO
             <br>
+            <br>
             <b>플랫폼</b>
-            <input type="radio" name="Moblie" value="Moblie">Moblie
-            <input type="radio" name="PC" value="PC">PC
-            <input type="radio" name="Playstation" value="Playstation">Playstation
+            <input type="checkbox" id="Mobile" name="Moblie" value="0">Moblie
+            <input type="checkbox" id="PC" name="PC" value="0">PC
+            <input type="checkbox" id="Playstation" name="Playstation" value="0">Playstation
+            <br>
             <br>
             <b>플레이 성향</b>
-            <input type="radio" name="screenshot" value="스크린샷">스크린샷
-            <input type="radio" name="everyone" value="다인모드">다인모드
-            <input type="radio" name="nasaun" value="나선비경">나선비경
-            <input type="radio" name="world" value="월드탐사">월드탐사
-            <input type="radio" name="levelup" value="캐릭터 육성">캐릭터 육성
-            <input type="radio" name="sevenking" value="입곱 성인의 소환">일곱 성인의 소환
-            <input type="text" name="any" placeholder="기타..">
+            <input type="checkbox" id="screenshot" name="screenshot" value="0">스크린샷
+            <input type="checkbox" id="everyone" name="everyone" value="0">다인모드
+            <input type="checkbox" id="nasaun" name="nasaun" value="0">나선비경
+            <input type="checkbox" id="world" name="world" value="0">월드탐사
+            <input type="checkbox" id="levelup" name="levelup" value="0">캐릭터 육성
+            <input type="checkbox" id="sevenking" name="sevenking" value="0">일곱 성인의 소환
+            <input type="text" id="anyyy" name="anyyy" placeholder="기타..">
+            <br>
             <br>
             <b>한마디</b>
             <input type="text" name="say" placeholder="한마디..">
+            <br>
+            <br>
+            <b>폰트</b>
+            <select name="fontes" onchange="changeFont()">
+                <option id="fontaa" name="fontaa" value="ONE POP">ONE Moblie POP</option>
+                <option id="fontaa" name="fontaa" value="Pretendard">Pretendard-ExtraBold</option>
+                <option id="fontaa" name="fontaa" value="textbase">base</option>
+            </select>
+            <input type="text" name="fonter" id="fonter" readonly value="안녕하세요!" >
+            <br>
+            <br>
+            <button type="button" onclick="sendDataBefore()">전송</button>
+            
         </form>
     </div>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <script src="index.js"></script>
 
 </body>
