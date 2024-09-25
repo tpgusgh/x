@@ -501,3 +501,10 @@ function myFunction() {
     changeFont()
     
 }
+
+function playsound(){
+    var audio = new Audio('playsound.mp3');
+    audio.play().catch(error => {
+        console.error('Error playing the audio:', error);
+    });
+}
