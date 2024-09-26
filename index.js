@@ -6,16 +6,15 @@ function handleMapChange(){
 
     if(gen.map.value === "mond"){
         characterSelect.innerHTML = `
-            <option value="캐릭터1">다이루크</option>
             <option value="캐릭터2">노엘</option>
-            <option value="캐릭터3">리사</option>
-            <option value="캐릭터4">로자리아</option>
-            <option value="캐릭터5">레이저</option>
+            <option value="캐릭터1">다이루크</option>
             <option value="캐릭터6">디오나</option>
+            <option value="캐릭터4">로자리아</option>
+            <option value="캐릭터3">리사</option>
             <option value="캐릭터7">모나</option>
+            <option value="캐릭터10">미카</option>
             <option value="캐릭터8">바바라</option>
             <option value="캐릭터9">베넷</option>
-            <option value="캐릭터10">미카</option>
             <option value="캐릭터11">벤티</option>
             <option value="캐릭터12">설탕</option>
             <option value="캐릭터13">알베도</option>
@@ -25,6 +24,7 @@ function handleMapChange(){
             <option value="캐릭터17">클레</option>
             <option value="캐릭터18">진</option>
             <option value="캐릭터19">피슬</option>
+            <option value="캐릭터5">레이저</option>
             
         `;
     }
@@ -43,8 +43,8 @@ function handleMapChange(){
             <option value="캐릭터11">운근</option>
             <option value="캐릭터12">응광</option>
             <option value="캐릭터13">종려</option>
-            <option value="캐릭터14">치치</option>
-            <option value="캐릭터15">중운</option>
+            <option value="캐릭터14">중운</option>
+            <option value="캐릭터15">치치</option>
             <option value="캐릭터16">행추</option>
             <option value="캐릭터17">향릉</option>
             <option value="캐릭터18">호두</option> 
@@ -106,17 +106,21 @@ function handleMapChange(){
             <option value="캐릭터3">아이테르</option>
             <option value="캐릭터4">페이몬</option>
             <option value="캐릭터5">에일로이</option>
-            <option value="캐릭터6">도토레</option>
-            <option value="캐릭터7">산드로네</option>
-            <option value="캐릭터8">시뇨라</option>
-            <option value="캐릭터9">아를레키노</option>
-            <option value="캐릭터10">카피타노</option>
-            <option value="캐릭터11">콜롬비나</option>
-            <option value="캐릭터12">타르탈리아</option>
-            <option value="캐릭터13">판탈로네</option>
-            <option value="캐릭터14">풀치넬라</option>
-            <option value="캐릭터15">피에로</option>
         `;
+    }
+    else if(gen.map.value === "sena"){
+        characterSelect.innerHTML = `
+            <option value="1">도토레</option>
+            <option value="2">산드로네</option>
+            <option value="3">시뇨라</option>
+            <option value="4">아를레키노</option>
+            <option value="5">카피타노</option>
+            <option value="6">콜롬비나</option>
+            <option value="7">타르탈리아</option>
+            <option value="8">판탈로네</option>
+            <option value="9">풀치넬라</option>
+            <option value="10">피에로</option>
+            `;
     }
 }
 
