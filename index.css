@@ -1,11 +1,55 @@
-input{
-    font-size: medium;
-}
-body{
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
     background: url(background.jpg) no-repeat center;
     background-size: cover;
+    font-family: 'Poppins', sans-serif;
 }
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+input {
+    font-size: medium;
+}
+
+.container {
+    max-width: 800px; /* 최대 너비 */
+    margin: auto; /* 중앙 정렬 */
+    background-color: rgba(198, 235, 242, 0.8); /* 반투명 배경 */
+    padding: 20px; /* 내부 여백 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    position: relative; /* 상대 위치 지정 */
+}
+
+.form {
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.form select,
+.form input[type="text"],
+.form input[type="checkbox"],
+.form input[type="radio"],
+.form button {
+    width: 100%; /* 너비 100% */
+    max-width: 90%; /* 최대 너비 */
+    margin: 10px auto; /* 상하 여백 중앙 정렬 */
+}
+
+.form input[type="checkbox"],
+.form input[type="radio"] {
+    width: auto; /* 너비 자동 */
+    display: inline-block; /* 블록 요소로 표시 */
+}
+
+.title {
+    font-size: 40px; /* 글자 크기 */
+    font-weight: 300; /* 글자 두께 */
+    line-height: normal; /* 줄 높이 */
+    margin-bottom: 20px; /* 하단 여백 */
+    border: 1px solid rgb(233, 252, 252); /* 테두리 */
+    padding: 10px; /* 내부 여백 */
+}
 
 @keyframes ring {
     0% {
@@ -54,4 +98,16 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     animation: ring 1.5s infinite;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+    .title {
+        font-size: 30px; /* 모바일에서 글자 크기 조정 */
+    }
+
+    .form input[type="text"],
+    .form button {
+        width: 90%; /* 모바일에서 최대 너비 90% */
+    }
 }
