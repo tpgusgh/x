@@ -34,6 +34,19 @@
             font-size: 14px;
             font-weight: bold;
         }
+        .text1 {
+        position: absolute;
+        color: #ff9090;
+        font-size: 14px;
+        width: 30%; /* 너비를 자동으로 조정 */
+        font-weight: bold;
+        word-break: break-word; /* 단어가 너무 길면 줄바꿈 */
+}
+
+.text1:nth-of-type(1) {
+    white-space: normal; /* 줄바꿈을 허용 */
+}
+
 </style>
 <body>
     
@@ -90,7 +103,7 @@
             <div class="text" style="top: 53%; left: 3%;" id="me">me</div>
             <div class="text" style="top: 21%; left: 38%;" id="level">level</div>
             <div class="text" style="top: 13%; left: 41%;" id="gameid">gameid</div>
-            <div class="text" style="top: 74%; left: 33.5%;" id="say">say</div>
+            <div class="text1" style="top: 74%; left: 33.5%; " id="say">say</div>
             <div class="text" style="top: 58.3%; left: 44.5%;" id="anyyy">anyyy</div>
         </div>
     </form>
