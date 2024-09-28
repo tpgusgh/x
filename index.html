@@ -17,7 +17,8 @@
             <p>↑</p>
             <p class="note">한번만 눌러주세여</p>
             <br>
-            <b>지역</b>
+            <b>지역 / 캐릭터</b>
+            <br>
             <select name="map" onchange="handleMapChange()">
                 <option value="mond">몬드</option>
                 <option value="riool">리월</option>
@@ -27,9 +28,8 @@
                 <option value="sena">스네즈나야</option>
                 <option value="anyting">기타</option>
             </select>
+
             <br>
-            
-            <b>캐릭터</b>
             <select name="character" id="character"></select>
             <br><br>
             <b>트윗 성향</b>
@@ -66,42 +66,51 @@
             <div onchange="doyouhave()">
                 <input type="radio" id="have" name="have" value="yes" checked>yes
                 <input type="text" id="inputText">
+                <br>
                 <input type="radio" id="have" name="have" value="no">no
             </div>
             <br>
             <b>이별</b>
+            <br>
             <input type="radio" name="sad" value="bye">언팔로우
             <input type="radio" name="sad" value="bob">블언블
             <input type="radio" name="sad" value="blak" checked>블락
             <br><br>
             <b>나이</b>
+            <br>
             <input type="radio" name="age" value="20up">20up
             <input type="radio" name="age" value="20down">20down
             <input type="radio" name="age" value="nothink" checked>비공개
             <br><br>
             <b>성별</b>
+            <br>
             <input type="radio" name="sex" value="male">남자
             <input type="radio" name="sex" value="female">여성
             <input type="radio" name="sex" value="nothanks" checked>비공개
             <br><br>
             <b>닉네임/UID</b>
+            <br>
             <input style="width: 180px;" type="text" name="gameid" placeholder="예:천사의노래/833366718">
             <br><br>
             <b>모험레벨</b>
+            <br>
             <input style="width: 50px;" type="number" name="level" placeholder="예:58">
             <br><br>
             <b>서버</b>
+            <br>
             <input type="radio" name="sever" value="Asia" checked>Asia
             <input type="radio" name="sever" value="Americ">Americ
             <input type="radio" name="sever" value="Europe">Europe
             <input type="radio" name="sever" value="TW/HK/MO">TW/HK/MO
             <br><br>
             <b>플랫폼</b>
+            <br>
             <input type="checkbox" id="Mobile" name="Moblie" value="0">Moblie
             <input type="checkbox" id="PCC" name="PCC" value="0">PC
             <input type="checkbox" id="Playstation" name="Playstation" value="0">Playstation
             <br><br>
             <b>플레이 성향</b>
+            <br>
             <input type="checkbox" id="screenshot" name="screenshot" value="0">스크린샷
             <input type="checkbox" id="everyone" name="everyone" value="0">다인모드
             <input type="checkbox" id="nasaun" name="nasaun" value="0">나선비경
@@ -111,9 +120,11 @@
             <input type="text" id="anyyy" name="anyyy" placeholder="기타..">
             <br><br>
             <b>한마디</b>
+            <br>
             <input type="text" name="say" placeholder="한마디..">
             <br><br>
             <b>폰트</b>
+            <br>
             <select name="fontes" onchange="changeFont()">
                 <option value="ONE POP">ONE Moblie POP</option>
                 <option value="Pretendard">Pretendard-ExtraBold</option>
