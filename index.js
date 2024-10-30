@@ -507,7 +507,7 @@ function myFunction() {
 }
 
 function playsound(){
-    var audio = new Audio('/sounds/playsound.mp3');
+    var audio = new Audio('../sounds/playsound.mp3');
     audio.play().catch(error => {
         console.error('Error playing the audio:', error);
     });
